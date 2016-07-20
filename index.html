@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+ <head>
+   <title>Koch Snowflake Pattern</title>
+  <meta charset="utf-8"/>
+  <script src="./lib/koch.js" charset="utf-8"></script>
+  <link rel="stylesheet" href="./assets/main.css" type="text/css"/>
+ </head>
+ <body>
+
+   <div class="container">
+     <div class="menu">
+       <h2>Menu</h2>
+       <div class="options">
+         <label>Number of iterations (0-4):</label>
+         <input type="number" min=0 max=4 value=3 onchange="setIteration()">
+         <label>Canvas width (100-1000):</label>
+         <input type="number" min=100 max=1000 value=600 onchange="setSideW()">
+         <label>Canvas height (100-600):</label>
+         <input type="number" min=100 max=600 value=600 onchange="setSideH()">
+         <label>Snowflake per row(1-5):</label>
+         <input type="number" min=1 max=5 value=2 onchange="setNumRow()">
+         <input type="button" value="Draw" onclick="reset()" class="draw-button">
+       </div>
+     </div>
+     <canvas id="canvas"></canvas>
+   </div>
+
+
+ </body>
+</html>
