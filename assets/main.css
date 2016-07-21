@@ -1,27 +1,55 @@
+body {
+  background-image: url("https://res.cloudinary.com/jonathol/image/upload/v1469040931/snowflakes_bonx06.jpg");
+  margin: 0;
+  border: 0;
+  padding: 0;
+  font-family: 'Tenali Ramakrishna', sans-serif;
+}
+
+header {
+  text-align: center;
+  background-color: #003399;
+  margin: 0;
+  margin-bottom: 50px;
+}
+
+h1 {
+  margin: 0;
+  color: #CCFFCC;
+  padding: 30px;
+  font-size: 60px;
+}
+
 .container {
   margin: 0 auto;
   display: flex;
-  flex-direction: column;
+  justify-content: center;
+}
+
+.canvas-container {
+  background-color: rgba(204, 255, 204, 0.7);
+  display: flex;
   align-items: center;
 }
 
 canvas {
-  visibility: hidden;
-  width: 10px;
-  height: 10px;
   border: 1px solid black;
-  margin: 50px;
+  margin: 20px;
+  background-color: #93D4D6;
 }
 
 .menu {
+  background-color: rgba(204, 255, 204, 0.7);
   display: flex;
-  align-items: center;
   flex-direction: column;
-  justify-content: center;
+  width: 200px;
+  padding-top: 20px;
+  padding-left: 20px;
 }
 
 h2 {
   text-align: center;
+  margin: 0;
 }
 
 .draw-button {
@@ -30,14 +58,22 @@ h2 {
 
 .options {
   display: flex;
-  align-items: center;
+  flex-direction: column;
+  justify-content: center;;
 }
 
 label {
-  margin-left: 20px;
+  margin-bottom: 5px;
 }
 
 input {
-  margin-left: 20px;
+  box-sizing: border-box;
+  margin-bottom: 10px;
   padding: 5px;
+  width: 184.5px;
+}
+
+input[type=button] {
+  margin: 0;
+  margin-bottom: 10px;
 }
