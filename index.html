@@ -1,35 +1,56 @@
 <!DOCTYPE html>
 <html>
  <head>
-   <title>Koch Snowflake Pattern</title>
+   <title>Koch Snowflake</title>
   <meta charset="utf-8"/>
   <script src="./lib/koch.js" charset="utf-8"></script>
   <link rel="stylesheet" href="./assets/main.css" type="text/css"/>
-  <link href="https://fonts.googleapis.com/css?family=Tenali+Ramakrishna" rel="stylesheet"> 
+  <link href="https://fonts.googleapis.com/css?family=Tenali+Ramakrishna" rel="stylesheet">
  </head>
  <body>
    <header>
-     <h1>Koch Snowflake Pattern</h1>
+     <h1>Koch Snowflake</h1>
    </header>
    <div class="container">
      <div class="menu">
        <h2>Menu</h2>
        <div class="options">
-         <label>Number of iterations [0-4]:</label>
-         <input type="number" min=0 max=4 value=3 onchange="setIteration()">
-         <label>Canvas width [100-1000]:</label>
-         <input type="number" min=100 max=1000 value=600 onchange="setSideW()">
-         <label>Canvas height [100-600]:</label>
-         <input type="number" min=100 max=600 value=600 onchange="setSideH()">
-         <label>Snowflake per row [1-4]:</label>
-         <input type="number" min=1 max=4 value=2 onchange="setNumRow()">
+         <label>Number of iterations:</label>
+         <select onchange="setIteration()">
+           <option value="0">0</option>
+           <option value="1">1</option>
+           <option value="2">2</option>
+           <option value="3" selected>3</option>
+           <option value="4">4</option>
+           <option value="5">5</option>
+         </select>
+         <label>Snowflake width:</label>
+         <select onchange="snowflakeWidth()">
+           <option value="100">100 px</option>
+           <option value="200">200 px</option>
+           <option value="300" selected>300 px</option>
+           <option value="400">400 px</option>
+           <option value="500">500 px</option>
+         </select>
+         <div class="checkbox-container">
+           <input type="checkbox" class="menu-checkbox" onclick="setPattern()">
+           <p>Pattern</p>
+         </div>
+         <input type="submit" value="Draw" class="draw-button" onclick="reset()">
+         <label id="original-perimeter">Original Perimeter:</label>
+         <label id="current-perimeter">Current Perimeter:</label>
+         <label id="original-area">Original Area:</label>
+         <label id="current-area">Current Area:</label>
        </div>
-       <input type="button" value="Draw" onclick="reset()" class="draw-button">
      </div>
      <div class="canvas-container">
        <canvas width=600 height=600 id="canvas"></canvas>
      </div>
    </div>
+
+   <p class="educational-container">
+     <label>Number of iterations:</label>
+   </p>
 
 
  </body>

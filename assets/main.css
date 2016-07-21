@@ -10,13 +10,13 @@ header {
   text-align: center;
   background-color: #003399;
   margin: 0;
-  margin-bottom: 50px;
+  margin-bottom: 40px;
 }
 
 h1 {
   margin: 0;
   color: #CCFFCC;
-  padding: 30px;
+  padding: 10px;
   font-size: 60px;
 }
 
@@ -42,38 +42,76 @@ canvas {
   background-color: rgba(204, 255, 204, 0.7);
   display: flex;
   flex-direction: column;
-  width: 200px;
+  width: 225px;
   padding-top: 20px;
   padding-left: 20px;
 }
 
 h2 {
   text-align: center;
+  font-size: 40px;
   margin: 0;
 }
 
 .draw-button {
-  margin-left: 20px;
+
 }
 
 .options {
   display: flex;
   flex-direction: column;
-  justify-content: center;;
+  justify-content: center;
 }
 
 label {
   margin-bottom: 5px;
+  font-size: 22px;
 }
 
-input {
+select {
   box-sizing: border-box;
   margin-bottom: 10px;
   padding: 5px;
   width: 184.5px;
+  font-family: 'Tenali Ramakrishna', sans-serif;
+  font-size: 20px;
 }
 
-input[type=button] {
+option {
+  padding: 5px;
+}
+
+input {
   margin: 0;
+  box-sizing: border-box;
   margin-bottom: 10px;
+  width: 184.5px;
+  font-family: 'Tenali Ramakrishna', sans-serif;
+  font-size: 20px;
+}
+
+.checkbox-container {
+  display: flex;
+  margin-bottom: 10px;
+
+  align-items: flex-start;
+}
+
+.menu-checkbox {
+  margin: 0;
+  width: 28px;
+  height: 28px;
+  margin-right: 10px;
+}
+
+p {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 20px;
+}
+
+.educational-container {
+  margin-top: 50px;
+  background-color: rgba(204, 255, 204, 0.7);
 }
