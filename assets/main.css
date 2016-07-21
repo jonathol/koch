@@ -12,12 +12,20 @@ header {
   margin: 0;
   margin-bottom: 40px;
   box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.7);
+  color: #CCFFCC;
+}
+
+header a {
+  margin-bottom: 20px;
+  text-decoration: none;
+  font-size: 26px;
+  color: #CCFFCC;
 }
 
 h1 {
   margin: 0;
-  color: #CCFFCC;
   padding: 10px;
+  padding-bottom: 0;
   font-size: 60px;
 }
 
@@ -155,4 +163,9 @@ h3 {
 
 .last {
   padding-bottom: 20px;
+}
+
+p a {
+  text-decoration: none;
+  color: #93D4D6;
 }
