@@ -1,57 +1,108 @@
 <!DOCTYPE html>
 <html>
- <head>
-   <title>Koch Snowflake</title>
-  <meta charset="utf-8"/>
-  <script src="./lib/koch.js" charset="utf-8"></script>
-  <link rel="stylesheet" href="./assets/main.css" type="text/css"/>
-  <link href="https://fonts.googleapis.com/css?family=Tenali+Ramakrishna" rel="stylesheet">
- </head>
- <body>
-   <header>
-     <h1>Koch Snowflake</h1>
-   </header>
-   <div class="container">
-     <div class="menu">
-       <h2>Menu</h2>
-       <div class="options">
-         <label>Number of iterations:</label>
-         <select onchange="setIteration()">
-           <option value="0">0</option>
-           <option value="1">1</option>
-           <option value="2">2</option>
-           <option value="3" selected>3</option>
-           <option value="4">4</option>
-           <option value="5">5</option>
-         </select>
-         <label>Snowflake width:</label>
-         <select onchange="snowflakeWidth()">
-           <option value="100">100 px</option>
-           <option value="200">200 px</option>
-           <option value="300" selected>300 px</option>
-           <option value="400">400 px</option>
-           <option value="500">500 px</option>
-         </select>
-         <div class="checkbox-container">
-           <input type="checkbox" class="menu-checkbox" onclick="setPattern()">
-           <p>Pattern</p>
-         </div>
-         <input type="submit" value="Draw" class="draw-button" onclick="reset()">
-         <label id="original-perimeter">Original Perimeter:</label>
-         <label id="current-perimeter">Current Perimeter:</label>
-         <label id="original-area">Original Area:</label>
-         <label id="current-area">Current Area:</label>
-       </div>
-     </div>
-     <div class="canvas-container">
-       <canvas width=600 height=600 id="canvas"></canvas>
-     </div>
-   </div>
+  <head>
+    <title>Koch Snowflake</title>
+    <meta charset="utf-8"/>
+    <script src="./lib/koch.js" charset="utf-8"></script>
+    <link rel="stylesheet" href="./assets/main.css" type="text/css"/>
+    <link href="https://fonts.googleapis.com/css?family=Tenali+Ramakrishna" rel="stylesheet">
+  </head>
 
-   <p class="educational-container">
-     <label>Number of iterations:</label>
-   </p>
+  <body>
+    <header>
+      <h1>Koch Snowflake</h1>
+    </header>
+    <div class="container">
+      <div class="menu">
+        <h2>Menu</h2>
+        <div class="options">
+          <label>Number of iterations:</label>
+          <select onchange="setIteration()">
+            <option value="0">0</option>
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3" selected>3</option>
+            <option value="4">4</option>
+            <option value="5">5</option>
+          </select>
+          <label>Snowflake width:</label>
+          <select onchange="snowflakeWidth()">
+            <option value="100">100 px</option>
+            <option value="200">200 px</option>
+            <option value="300" selected>300 px</option>
+            <option value="400">400 px</option>
+            <option value="500">500 px</option>
+          </select>
+          <div class="checkbox-container">
+            <input type="checkbox" class="menu-checkbox" onclick="setPattern()">
+            <p>Pattern</p>
+          </div>
+          <input type="submit" value="Draw" class="draw-button" onclick="reset()">
+          <label id="original-perimeter">Original Perimeter:</label>
+          <label id="current-perimeter">Current Perimeter:</label>
+          <label id="original-area">Original Area:</label>
+          <label id="current-area">Current Area:</label>
+        </div>
+      </div>
+      <div class="canvas-container">
+        <canvas width=600 height=600 id="canvas"></canvas>
+      </div>
+    </div>
 
+    <div class="educational-container">
+      <h2 class="educational-title">History</h2>
+      <p class="educational-p">
+        The Koch snowflake is a mathematical curve and one of the earliest
+        fractal curves to have been described. It is based on the Koch curve,
+        which appeared in a 1904 paper
+        titled "On a continuous curve without tangents, constructible from
+        elementary geometry" by the
+        Swedish mathematician Helge von Koch.
+        <br>
+        The progression for the area of the snowflake converges to 1.6 times the
+        area of the original triangle, while the progression for the snowflake's
+        perimeter diverges to infinity. Consequently, the snowflake has a finite
+        area bounded by an infinitely long line.
+        <br>
+        More details can be found <a href="https://en.wikipedia.org/wiki/Koch_snowflake">here</a>.
+      </p>
 
- </body>
+      <h2 class="educational-title">Construction</h2>
+      <p class="educational-p">
+        The Koch snowflake can be constructed by starting with an equilateral
+        triangle, then recursively altering each line segment as follows:
+      </p>
+      <ol>
+        <li>divide the line segment into three segments of equal length</li>
+        <li>
+          draw an equilateral triangle that has the middle segment from step
+          1 as its base and points outward
+        </li>
+        <li>
+          remove the line segment that is the base of the triangle from step 2
+        </li>
+      </ol>
+      </p>
+
+      <h2 class="educational-title">Properties</h2>
+      <h3 >Perimeter</h3>
+      <p class="educational-p">
+        The perimeter of the snowflake after <b><i>n</i></b> iterations is:
+        <br>
+        P<sub>n</sub> = 3 * s * (4/3)<sup>n</sup>
+        <br>
+        where <b><i>s</i></b> is the length of the side.
+      </p>
+
+      <h3 >Area</h3>
+      <p class="educational-p last">
+        The area of the snowflake after <b><i>n</i></b> iterations is:
+        <br>
+        A<sub>n</sub> = (a<sub>0</sub>/5) * (8-3(4/9)<sup>n</sup>)
+        <br>
+        where <b><i>a<sub>0</sub></i></b> is the area of the original triangle.
+        <br>
+      </p>
+    </div>
+  </body>
 </html>
