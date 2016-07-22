@@ -18,7 +18,7 @@
         <h2>Menu</h2>
         <div class="options">
           <label>Number of iterations:</label>
-          <select onchange="setIteration(e)">
+          <select onchange="setIteration(event)">
             <option value="0">0</option>
             <option value="1">1</option>
             <option value="2">2</option>
@@ -27,7 +27,7 @@
             <option value="5">5</option>
           </select>
           <label>Snowflake width:</label>
-          <select onchange="snowflakeWidth(e)">
+          <select onchange="snowflakeWidth(event)">
             <option value="100">100 px</option>
             <option value="200">200 px</option>
             <option value="300" selected>300 px</option>
@@ -35,7 +35,7 @@
             <option value="500">500 px</option>
           </select>
           <div class="checkbox-container">
-            <input type="checkbox" class="menu-checkbox" onclick="setPattern(e)">
+            <input type="checkbox" class="menu-checkbox" onclick="setPattern(event)">
             <p>Pattern</p>
           </div>
           <input type="submit" value="Draw" class="draw-button" onclick="reset()">
