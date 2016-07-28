@@ -166,5 +166,11 @@ h3 {
 
 p a {
   text-decoration: none;
-  color: #93D4D6;
+  color: #003399;
+}
+
+.options a {
+  text-decoration: none;
+  color: #003399;
+  font-size: 22px;
 }
